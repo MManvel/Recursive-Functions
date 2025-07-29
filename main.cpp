@@ -1,13 +1,22 @@
 #include <iostream>
 
-long long power(int a,int b){
-	if(b==0)return 1;
-	return a * power(a,b-1);
+int F(int i){
+	if(i==0)return 0;
+	if(i==1)return 5;
+	if(i==2)return 3;
+	if(i==3)return 4;
+	if(i==4)return 4;	
+
+	return F(i-5) * F(i-4) + F(i-2);
 }
 
-int main(){
-	int a,b;
-	std::cin>>a>>b;
-	std::cout<<power(a,b)<<std::endl;
-	return 0;
+int main (){
+
+int N;
+std::cin>>N;
+std::cout<<F(N)<<std::endl;
+return 0;
+
 }
+
+
