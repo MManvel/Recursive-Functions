@@ -1,17 +1,16 @@
 #include <iostream>
 
+long long factorial(int n){
+	if(n<=1)return 1;
+	return n*factorial(n-1);
 
-void PrintNumbers(int current,int n){
-	if(current>n)return;
-	std::cout<<current;
-	if(current<n)std::cout<<" ";
-	printNumbers(current+1,n);
 }
 
 int main(){
 	int N;
-	cin>>N;
-	printNumbers(1,N);
-	return 0;
-
+	std::cin>>N;
+	std::cout<<factorial(N);
+	return 0;	
 }
+
+
