@@ -1,16 +1,13 @@
 #include <iostream>
 
-long long factorial(int n){
-	if(n<=1)return 1;
-	return n*factorial(n-1);
-
+long long power(int a,int b){
+	if(b==0)return 1;
+	return a * power(a,b-1);
 }
 
 int main(){
-	int N;
-	std::cin>>N;
-	std::cout<<factorial(N);
-	return 0;	
+	int a,b;
+	std::cin>>a>>b;
+	std::cout<<power(a,b)<<std::endl;
+	return 0;
 }
-
-
